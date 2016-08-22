@@ -1,0 +1,3 @@
+Implement some sort of state input checker for spell casting maybe
+
+make a player object that matches position of eye rather than overbuilding the eye object
