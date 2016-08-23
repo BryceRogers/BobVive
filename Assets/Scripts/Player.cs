@@ -5,9 +5,10 @@ public class Player : MonoBehaviour {
 
 	public GameObject controllerRight;
 	public GameObject controllerLeft;
+	public GameObject playerEyes;
 
 	// Spell vars (maybe move)
-	private float sqrShieldDistance = 3.0f;
+	private float sqrShieldDistance = 2.8f;
 
 	// Spell scripts
 	private Shield shield;
@@ -18,9 +19,10 @@ public class Player : MonoBehaviour {
 	
 	void Update () {
 
+		gameObject.transform.position = playerEyes.transform.position;
+
 		// Spell checks
 		float sqrControllerDistance = (controllerLeft.transform.position - controllerRight.transform.position).sqrMagnitude;
-		Debug.Log (sqrControllerDistance);
 		if(sqrControllerDistance > sqrShieldDistance){
 			shield.activate ();	
 		} else {

@@ -1,3 +1,3 @@
 Implement some sort of state input checker for spell casting maybe
 
-make a player object that matches position of eye rather than overbuilding the eye object
+Shield can be done with one hand up and one down maybe check that controllers are within x height as well
