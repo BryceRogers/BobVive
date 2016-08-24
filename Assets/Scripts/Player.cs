@@ -28,6 +28,6 @@ public class Player : MonoBehaviour {
 		} else {
 			shield.deactivate ();
 		}
-	
+
 	}
 }
