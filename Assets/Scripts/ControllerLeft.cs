@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using NewtonVR;
 
-public class Controller : MonoBehaviour {
+public class ControllerLeft : MonoBehaviour {
 
-	public GameObject teleportOrbPrefab;
-
-	private NVRInteractableItem interactableItem;
+	public GameObject teleportOrbsManagerObject;
+	private TeleportOrbManager teleportOrbsManager;
 
 	private NVRHand nVRHand;
 
@@ -25,6 +24,7 @@ public class Controller : MonoBehaviour {
 	void Start () {
 		trackedObject = GetComponent <SteamVR_TrackedObject> ();
 		nVRHand = GetComponent <NVRHand> ();
+		teleportOrbsManager = teleportOrbsManagerObject.GetComponent <TeleportOrbManager> ();
 	}
 
 	void Update () {
@@ -34,12 +34,10 @@ public class Controller : MonoBehaviour {
 		}
 
 		if (controller.GetPressDown (touchPad)) {
-			GameObject teleportOrb = (GameObject)Instantiate (teleportOrbPrefab, nVRHand.transform.position, Quaternion.identity);
-			interactableItem = teleportOrb.GetComponent <NVRInteractableItem>();
-			interactableItem.BeginInteraction (nVRHand);
+			teleportOrbsManager.leftPress (nVRHand);
 		}
 		if (controller.GetPressUp (touchPad)) {
-			interactableItem.EndInteraction ();
+			teleportOrbsManager.leftRelease ();
 		}
 
 	}
