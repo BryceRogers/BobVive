@@ -6,6 +6,9 @@ public class TeleportOrbManager : MonoBehaviour {
 
 	public GameObject teleportOrbPrefab;
 
+	public GameObject nVRCameraRig;
+	public GameObject cameraHead;
+
 	private NVRInteractableItem interactableItemRight;
 	private NVRInteractableItem interactableItemLeft;
 
@@ -86,15 +89,23 @@ public class TeleportOrbManager : MonoBehaviour {
 		Vector3 direction = seeken.transform.position -  seeker.transform.position;
 		float distance = direction.sqrMagnitude;
 		if(distance < sqrOrbTeleDistance) {
-			seeking = false;
-			Destroy (interactableItemLeft.gameObject);
-			interactableItemLeft = null;
-			Destroy (interactableItemRight.gameObject);
-			interactableItemRight = null;
-			speed = baseSpeed;
+			teleport (new Vector3(seeken.transform.position.x, 0.0f, seeken.transform.position.z));
 		}
 		speed += acceleration;
 		Vector3 velocity = direction.normalized * speed;
 		seeker.GetComponent <Rigidbody>().velocity = velocity;
+	}
+
+	private void teleport(Vector3 targetLocation) {
+		seeking = false;
+
+		Vector3 headPosOnGround = new Vector3(SteamVR_Render.Top().head.localPosition.x, 0.0f, SteamVR_Render.Top().head.localPosition.z);
+		nVRCameraRig.transform.position = targetLocation - headPosOnGround;
+
+		Destroy (interactableItemLeft.gameObject);
+		interactableItemLeft = null;
+		Destroy (interactableItemRight.gameObject);
+		interactableItemRight = null;
+		speed = baseSpeed;
 	}
 }
