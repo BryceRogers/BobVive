@@ -8,6 +8,9 @@ public class ControllerLeft : MonoBehaviour {
 	public GameObject teleportOrbsManagerObject;
 	private TeleportOrbManager teleportOrbsManager;
 
+	public GameObject highLowOrbsManagerObject;
+	private HighLowOrbManager highLowOrbsManager;
+
 	private NVRHand nVRHand;
 
 	private SteamVR_TrackedObject trackedObject;
@@ -25,6 +28,7 @@ public class ControllerLeft : MonoBehaviour {
 		trackedObject = GetComponent <SteamVR_TrackedObject> ();
 		nVRHand = GetComponent <NVRHand> ();
 		teleportOrbsManager = teleportOrbsManagerObject.GetComponent <TeleportOrbManager> ();
+		highLowOrbsManager = highLowOrbsManagerObject.GetComponent <HighLowOrbManager> ();
 	}
 
 	void Update () {
@@ -39,7 +43,12 @@ public class ControllerLeft : MonoBehaviour {
 		if (controller.GetPressUp (touchPad)) {
 			teleportOrbsManager.leftRelease ();
 		}
-
+		if (controller.GetPressDown (triggerButton)) {
+			highLowOrbsManager.leftPress (nVRHand);
+		}
+		if (controller.GetPressUp (triggerButton)) {
+			highLowOrbsManager.leftRelease ();
+		}
 	}
 
 }

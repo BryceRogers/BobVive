@@ -10,7 +10,7 @@ namespace NewtonVR
 {
     public class NVRHand : MonoBehaviour
     {
-		private Valve.VR.EVRButtonId HoldButton = EVRButtonId.k_EButton_SteamVR_Trigger;
+		private Valve.VR.EVRButtonId HoldButton = EVRButtonId.k_EButton_Grip;
         public bool HoldButtonDown = false;
         public bool HoldButtonUp = false;
         public bool HoldButtonPressed = false;
