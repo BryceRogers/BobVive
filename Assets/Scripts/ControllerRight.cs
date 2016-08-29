@@ -47,7 +47,7 @@ public class ControllerRight : MonoBehaviour {
 			highLowOrbsManager.rightPress (nVRHand);
 		}
 		if (controller.GetPressUp (triggerButton)) {
-			highLowOrbsManager.rightRelease ();
+			highLowOrbsManager.rightRelease (nVRHand);
 		}
 	}
 

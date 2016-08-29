@@ -1,3 +1,31 @@
-Implement some sort of state input checker for spell casting maybe
+
+Make Low Orb destructibles tag or some ish and make them be destroyed
+
+Make High Orb actually a light
+
+Make Shield Explode trigger
+
+Make shield explode actually knock loads of things back
 
 Shield can be done with one hand up and one down maybe check that controllers are within x height as well
+
+Make low orbs destroy on any impact
+
+
+
+
+
+
+
+Make tethers for the teleport orb
+
+Make the shield look lit and respond to impacts visually
+
+Find/Make hectic energy explosion particle for shield explode
+
+Make sounds for
+  shield
+  shield explode
+  high orb
+  low orb
+  everythang!

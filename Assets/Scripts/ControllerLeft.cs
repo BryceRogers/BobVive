@@ -47,7 +47,7 @@ public class ControllerLeft : MonoBehaviour {
 			highLowOrbsManager.leftPress (nVRHand);
 		}
 		if (controller.GetPressUp (triggerButton)) {
-			highLowOrbsManager.leftRelease ();
+			highLowOrbsManager.leftRelease (nVRHand);
 		}
 	}
 
