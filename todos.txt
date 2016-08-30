@@ -7,15 +7,18 @@ Make Shield Explode trigger
 
 Make shield explode actually knock loads of things back
 
-Shield can be done with one hand up and one down maybe check that controllers are within x height as well
-
 Make low orbs destroy on any impact
 
+Make line for aiming High and Low Orbs
 
 
 
 
 
+Spells should not be able to be cast at same time e.g
+    summon a high low orb when a teleport is being held
+    or summon any orb while shield is up
+    Not sure if trying to should cancel first or prevent second and keep first
 
 Make tethers for the teleport orb
 
