@@ -13,6 +13,10 @@ public class Player : MonoBehaviour {
 	// Spell scripts
 	private Shield shield;
 
+	public bool shieldActive;
+	public bool leftTriggerHeld;
+	public bool rightTriggerHeld;
+
 	void Start () {
 		shield = GetComponent<Shield>();
 	}
@@ -31,5 +35,12 @@ public class Player : MonoBehaviour {
 			shield.deactivate ();
 		}
 
+	}
+
+	public void triggerPressedShieldOn() {
+		if(leftTriggerHeld && rightTriggerHeld) {
+			// Cast Shield Explode
+			Debug.Log ("Cast shield explode");
+		}
 	}
 }
