@@ -3,10 +3,6 @@ Make Low Orb destructibles tag or some ish and make them be destroyed
 
 Make High Orb actually a light
 
-Make Shield Explode trigger
-
-Make shield explode actually knock loads of things back
-
 Make low orbs destroy on any impact
 
 Make line for aiming High and Low Orbs
