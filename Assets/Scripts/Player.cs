@@ -13,6 +13,9 @@ public class Player : MonoBehaviour {
 	// Spell scripts
 	private Shield shield;
 	private ShieldExplode shieldExplode;
+	private bool explodeAvailable = true;
+	private float explodeTimer = 0f;
+	private float explodeCooldown = 2f;
 
 	public bool shieldActive;
 	public bool leftTriggerHeld;
@@ -32,18 +35,30 @@ public class Player : MonoBehaviour {
 		Vector2 controllerRightPosition = new Vector2(controllerRight.transform.position.x, controllerRight.transform.position.z);
 		float sqrControllerDistance = (controllerLeftPosition - controllerRightPosition).sqrMagnitude;
 		if(sqrControllerDistance > sqrShieldDistance){
-			shieldActive = true;
-			shield.activate ();	
+			//shieldActive = true;
+			if (explodeAvailable) {
+				shieldExplode.explode ();
+				explodeAvailable = false;
+			}
+			//shield.activate ();	
 		} else {
-			shieldActive = false;
-			shield.deactivate ();
+			//shieldActive = false;
+			//shield.deactivate ();
+		}
+
+		if (!explodeAvailable) {
+			explodeTimer += Time.deltaTime;
+			if (explodeTimer > explodeCooldown) {
+				explodeTimer = 0f;
+				explodeAvailable = true;
+			}
 		}
 
 	}
 
 	public void triggerPressedShieldOn() {
-		if(leftTriggerHeld && rightTriggerHeld) {
-			shieldExplode.explode ();
-		}
+		//if(leftTriggerHeld && rightTriggerHeld) {
+		//	shieldExplode.explode ();
+		//}
 	}
 }

@@ -26,7 +26,7 @@ public class ShieldExplode : MonoBehaviour {
 		if (!exploding) {
 			exploding = true;
 			shieldExplodeObject.SetActive (true);
-			timeLeft = 0.5f;
+			timeLeft = 0.3f;
 		}
 	}
 }
