@@ -1,13 +1,11 @@
 
 Make Low Orb destructibles tag or some ish and make them be destroyed
 
-Make High Orb actually a light
-
 Make low orbs destroy on any impact
 
 Make line for aiming High and Low Orbs
 
-
+Make it so teleport orbs go a bit faster and cannot be resummoned once they are both airborne
 
 
 
@@ -18,8 +16,6 @@ Spells should not be able to be cast at same time e.g
 
 Make tethers for the teleport orb
 
-Make the shield look lit and respond to impacts visually
-
 Find/Make hectic energy explosion particle for shield explode
 
 Make sounds for
@@ -28,3 +24,6 @@ Make sounds for
   high orb
   low orb
   everythang!
+
+Once you are decided on the set of spells actually delete all the shield code
+  consider renaiming the shield explode stuff to be just explode

@@ -22,6 +22,12 @@ public class TeleportOrbManager : MonoBehaviour {
 	private static float acceleration = 0.6f;
 	private static float sqrOrbTeleDistance = 0.1f; // How close the orbs need to be before the teleporation occurs
 
+	private LineRenderer tether;
+
+	void Start() {
+		tether = GetComponent <LineRenderer> ();
+	}
+
 	public void rightPress(NVRHand hand) {
 		seeking = false;
 		// Destroy current right orb
@@ -82,7 +88,12 @@ public class TeleportOrbManager : MonoBehaviour {
 				seek (interactableItemLeft.gameObject, interactableItemRight.gameObject);
 			}
 		}
-		
+
+		if (interactableItemLeft != null && interactableItemRight != null) {
+			// tether
+			tether.SetPosition (0, interactableItemLeft.transform.position);
+			tether.SetPosition (1, interactableItemRight.transform.position);
+		}
 	}
 
 	private void seek(GameObject seeker, GameObject seeken) {
@@ -94,6 +105,7 @@ public class TeleportOrbManager : MonoBehaviour {
 		speed += acceleration;
 		Vector3 velocity = direction.normalized * speed;
 		seeker.GetComponent <Rigidbody>().velocity = velocity;
+
 	}
 
 	private void teleport(Vector3 targetLocation) {
@@ -106,6 +118,12 @@ public class TeleportOrbManager : MonoBehaviour {
 		interactableItemLeft = null;
 		Destroy (interactableItemRight.gameObject);
 		interactableItemRight = null;
+		destroyTether ();
 		speed = baseSpeed;
+	}
+
+	private void destroyTether() {
+		tether.SetPosition (0, new Vector3(0f, 0f, 0f));
+		tether.SetPosition (1, new Vector3(0f, 0f, 0f));
 	}
 }
