@@ -17,9 +17,9 @@ public class TeleportOrbManager : MonoBehaviour {
 	private bool rightIsSeeker; // which orb is seeking the other
 	private bool seeking;
 
-	private static float baseSpeed = 10.0f;
+	private static float baseSpeed = 20.0f;
 	private static float speed = baseSpeed;
-	private static float acceleration = 0.6f;
+	private static float acceleration = 0.8f;
 	private static float sqrOrbTeleDistance = 0.1f; // How close the orbs need to be before the teleporation occurs
 
 	private LineRenderer tether;
