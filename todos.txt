@@ -1,4 +1,10 @@
 
+Test explosion still works.
+
+Refactor explosion
+    Delete Explosion class and game object
+    write a circle check to get all objects within radius then add force to all objects in list within the ExplodeBehaviour
+
 Make Low Orb destructibles tag or some ish and make them be destroyed
 
 Make low orbs destroy on any impact
@@ -6,24 +12,21 @@ Make low orbs destroy on any impact
 Make line for aiming High and Low Orbs
 
 Make it so teleport orbs go a bit faster and cannot be resummoned once they are both airborne
+    ensure if thumb is held before orb able to be resummoned that it then will be as soon as it can without needing to let go and rehold
 
 
 
 Spells should not be able to be cast at same time e.g
     summon a high low orb when a teleport is being held
-    or summon any orb while shield is up
     Not sure if trying to should cancel first or prevent second and keep first
-
-Make tethers for the teleport orb
 
 Find/Make hectic energy explosion particle for shield explode
 
 Make sounds for
-  shield
-  shield explode
+  explode
   high orb
   low orb
   everythang!
 
 Once you are decided on the set of spells actually delete all the shield code
-  consider renaiming the shield explode stuff to be just explode
+  renaming the shield explode stuff to be just explode
