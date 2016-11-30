@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShieldExplode : MonoBehaviour {
+public class ExplodeBehaviour : MonoBehaviour, Explodable {
 
 	private bool exploding = false;
 	private float timeLeft;

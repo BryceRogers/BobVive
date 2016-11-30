@@ -6,7 +6,7 @@ using NewtonVR;
 public class ControllerLeft : MonoBehaviour {
 
 	public GameObject playerObject;
-	private Player player;
+	private PlayerBehaviour player;
 
 	public GameObject teleportOrbsManagerObject;
 	private TeleportOrbManager teleportOrbsManager;
@@ -32,7 +32,7 @@ public class ControllerLeft : MonoBehaviour {
 		nVRHand = GetComponent <NVRHand> ();
 		teleportOrbsManager = teleportOrbsManagerObject.GetComponent <TeleportOrbManager> ();
 		highLowOrbsManager = highLowOrbsManagerObject.GetComponent <HighLowOrbManager> ();
-		player = playerObject.GetComponent<Player> ();
+		player = playerObject.GetComponent<PlayerBehaviour> ();
 	}
 
 	void Update () {
@@ -48,16 +48,9 @@ public class ControllerLeft : MonoBehaviour {
 			teleportOrbsManager.leftRelease ();
 		}
 		if (controller.GetPressDown (triggerButton)) {
-			player.leftTriggerHeld = true;
-			if (player.shieldActive) {
-				player.triggerPressedShieldOn ();
-			} else {
-				highLowOrbsManager.leftPress (nVRHand);
-			}
-
+			highLowOrbsManager.leftPress (nVRHand);
 		}
 		if (controller.GetPressUp (triggerButton)) {
-			player.leftTriggerHeld = false;
 			highLowOrbsManager.leftRelease (nVRHand);
 		}
 	}
