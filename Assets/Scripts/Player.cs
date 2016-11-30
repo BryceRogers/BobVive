@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
 	private float sqrShieldDistance = 2.6f;
 
 	// Spell scripts
-	private Shield shield;
+//	private Shield shield;
 	private ShieldExplode shieldExplode;
 	private bool explodeAvailable = true;
 	private float explodeTimer = 0f;
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 	public bool rightTriggerHeld;
 
 	void Start () {
-		shield = GetComponent<Shield>();
+//		shield = GetComponent<Shield>();
 		shieldExplode = GetComponent <ShieldExplode> ();
 	}
 	
