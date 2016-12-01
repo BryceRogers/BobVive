@@ -33,11 +33,11 @@ public class Explode {
 		}
 	}
 
-	private Boolean horizontalSqrDistanceGreaterThan(Vector3 pos1, Vector3 pos2, float maxDist) {
+	private bool horizontalSqrDistanceGreaterThan(Vector3 pos1, Vector3 pos2, float minDist) {
 		Vector2 pos1NoVertical = new Vector2 (pos1.x, pos1.z);
 		Vector2 pos2NoVertical = new Vector2 (pos2.x, pos2.z);
 		float sqrDistance = (pos1NoVertical - pos2NoVertical).sqrMagnitude;
-		return sqrDistance > maxDist;
+		return sqrDistance > minDist;
 	}
 }
 

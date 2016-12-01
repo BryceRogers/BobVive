@@ -37,17 +37,18 @@ public class ControllerLeft : MonoBehaviour {
 			return;
 		}
 
-		if (controller.GetPressDown (touchPad)) {
+		if (controller.GetPressDown (triggerButton)) {
 			teleportOrbsManager.leftPress (nVRHand);
 		}
-		if (controller.GetPressUp (touchPad)) {
+		if (controller.GetPressUp (triggerButton)) {
 			teleportOrbsManager.leftRelease ();
 		}
-		if (controller.GetPressDown (triggerButton)) {
-			highLowOrbsManager.leftPress (nVRHand);
-		}
-		if (controller.GetPressUp (triggerButton)) {
-			highLowOrbsManager.leftRelease (nVRHand);
-		}
+
+//		if (controller.GetPressDown (triggerButton)) {
+//			highLowOrbsManager.leftPress (nVRHand);
+//		}
+//		if (controller.GetPressUp (triggerButton)) {
+//			highLowOrbsManager.leftRelease (nVRHand);
+//		}
 	}
 }
