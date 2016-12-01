@@ -1,4 +1,6 @@
 
+    TODOS
+
 Test explosion still works.
 
 Refactor explosion
@@ -10,6 +12,10 @@ Make Low Orb destructibles tag or some ish and make them be destroyed
 
 Make low orbs destroy on any impact
 
+Make low orbs summon distance check distance between controller and head not just height of controller
+    this prevents the trick where you just crouch to summon them without movement required
+    this also means crouching isn't necessary (badass stand tall stance works for all spells)
+
 Make line for aiming High and Low Orbs
 
 Make it so teleport orbs go a bit faster and cannot be resummoned once they are both airborne
@@ -17,11 +23,18 @@ Make it so teleport orbs go a bit faster and cannot be resummoned once they are 
 
 
 
+    LATER TODOS
+
 Spells should not be able to be cast at same time e.g
     summon a high low orb when a teleport is being held
     Not sure if trying to should cancel first or prevent second and keep first
 
 Find/Make hectic energy explosion particle for shield explode
+
+Get lit fire particle for low orb
+
+Get dope model for controller objects
+    Some sweet magical device
 
 Make sounds for
   explode
@@ -31,3 +44,13 @@ Make sounds for
 
 Once you are decided on the set of spells actually delete all the shield code
   renaming the shield explode stuff to be just explode
+
+
+    IDEAS
+
+Make it so no button is required to summon low and high orbs
+    They summon when you are holding the controller high or low enough unless you already have an unreleased orb summoned
+    Make the release of the orbs on a timer
+        This would give the game a sense of rhythm and help balance/prevent spamming
+    Make controller buzz on summon and release
+    Then you can make teleport orbs summon on the trigger which lets admit feels better

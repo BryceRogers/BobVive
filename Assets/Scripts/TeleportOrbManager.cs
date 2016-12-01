@@ -14,7 +14,7 @@ public class TeleportOrbManager : MonoBehaviour {
 
 	private bool rightHeld;
 	private bool leftHeld;
-	private bool rightIsSeeker; // which orb is seeking the other
+	private bool rightIsSeeker; // false means left is seeker
 	private bool seeking;
 
 	private static float baseSpeed = 20.0f;

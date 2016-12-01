@@ -4,6 +4,11 @@ using NewtonVR;
 
 public class HighLowOrbManager : MonoBehaviour {
 
+	private const float lowOrbMaxHeight = 0.8f;
+	private const float highOrbMinHeight = 1.8f;
+	private const float lowOrbSpeed = 40.0f;
+	private const float highOrbSpeed = 4.0f;
+
 	public GameObject lowOrbPrefab;
 	public GameObject highOrbPrefab;
 
@@ -12,11 +17,6 @@ public class HighLowOrbManager : MonoBehaviour {
 	private bool orbRightLow; 
 	private bool orbLeftLow; // These two bools used to determine which orb type it is on release
 
-	private float lowOrbMaxHeight = 0.8f;
-	private float highOrbMinHeight = 1.8f;
-
-	private float lowOrbSpeed = 40.0f;
-	private float highOrbSpeed = 4.0f;
 
 	public void rightPress(NVRHand hand) {
 		// Spawn new one at hand
@@ -85,5 +85,4 @@ public class HighLowOrbManager : MonoBehaviour {
 			orbLeft = null; // Prevents the release from boosting the orb more
 		}
 	}
-
 }
