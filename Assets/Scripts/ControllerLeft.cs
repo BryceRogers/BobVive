@@ -9,7 +9,7 @@ public class ControllerLeft : MonoBehaviour {
 	private TeleportOrbManager teleportOrbsManager;
 
 	public GameObject highLowOrbsManagerObject;
-	private HighLowOrbManager highLowOrbsManager;
+//	private HighLowOrbManager highLowOrbsManager;
 
 	private NVRHand nVRHand;
 
@@ -20,15 +20,15 @@ public class ControllerLeft : MonoBehaviour {
 		}
 	}
 
-	private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
+//	private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
 	private Valve.VR.EVRButtonId triggerButton = Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger;
-	private Valve.VR.EVRButtonId touchPad = Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad;
+//	private Valve.VR.EVRButtonId touchPad = Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad;
 
 	void Start () {
 		trackedObject = GetComponent <SteamVR_TrackedObject> ();
 		nVRHand = GetComponent <NVRHand> ();
 		teleportOrbsManager = teleportOrbsManagerObject.GetComponent <TeleportOrbManager> ();
-		highLowOrbsManager = highLowOrbsManagerObject.GetComponent <HighLowOrbManager> ();
+//		highLowOrbsManager = highLowOrbsManagerObject.GetComponent <HighLowOrbManager> ();
 	}
 
 	void Update () {

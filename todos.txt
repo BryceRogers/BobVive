@@ -1,6 +1,8 @@
 
     TODOS
 
+Make menu with new and load game
+
 Test explosion still works
 
 Test new high low orb summoning by putting the spawner on each controller object

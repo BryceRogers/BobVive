@@ -2,8 +2,8 @@
 using System.Collections;
 using NewtonVR;
 
-public class HighLowHandSpawner : MonoBehaviour
-{
+public class HighLowHandSpawner : MonoBehaviour {
+	
 	private const float aimTime = 2f;
 	private const float lowOrbSpeed = 40.0f;
 	private const float highOrbSpeed = 4.0f;
