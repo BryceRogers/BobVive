@@ -4,6 +4,7 @@ Test explosion still works.
 Refactor explosion
     Delete Explosion class and game object
     write a circle check to get all objects within radius then add force to all objects in list within the ExplodeBehaviour
+        Physics.OverlapSphere() <-- use that to get all the colliders
 
 Make Low Orb destructibles tag or some ish and make them be destroyed
 
